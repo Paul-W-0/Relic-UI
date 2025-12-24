@@ -1,0 +1,156 @@
+/* Relic UI - Banner/Alert Component */
+
+.relic-banner {
+  position: relative;
+  padding: var(--relic-space-md) var(--relic-space-lg);
+  margin-bottom: var(--relic-space-md);
+  border: 1px solid transparent;
+  border-radius: var(--relic-radius-md);
+}
+
+.relic-banner-title {
+  font-size: var(--relic-font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--relic-space-xs);
+}
+
+.relic-banner-content {
+  font-size: var(--relic-font-size-base);
+}
+
+.relic-banner-close {
+  position: absolute;
+  top: var(--relic-space-md);
+  right: var(--relic-space-lg);
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: var(--relic-font-size-xl);
+  line-height: 1;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: var(--relic-transition);
+}
+
+.relic-banner-close:hover {
+  opacity: 1;
+}
+
+/* Banner Variants */
+.relic-banner-primary {
+  color: #1e40af;
+  background-color: #dbeafe;
+  border-color: #93c5fd;
+}
+
+.relic-banner-secondary {
+  color: #5b21b6;
+  background-color: #ede9fe;
+  border-color: #c4b5fd;
+}
+
+.relic-banner-success {
+  color: #065f46;
+  background-color: #d1fae5;
+  border-color: #6ee7b7;
+}
+
+.relic-banner-danger {
+  color: #991b1b;
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.relic-banner-warning {
+  color: #92400e;
+  background-color: #fef3c7;
+  border-color: #fcd34d;
+}
+
+.relic-banner-info {
+  color: #164e63;
+  background-color: #cffafe;
+  border-color: #67e8f9;
+}
+
+.relic-banner-light {
+  color: var(--relic-gray-800);
+  background-color: var(--relic-gray-100);
+  border-color: var(--relic-gray-300);
+}
+
+.relic-banner-dark {
+  color: var(--relic-white);
+  background-color: var(--relic-gray-800);
+  border-color: var(--relic-gray-700);
+}
+
+/* Banner with Icon */
+.relic-banner-with-icon {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--relic-space-md);
+}
+
+.relic-banner-icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.125rem;
+}
+
+/* Banner Sizes */
+.relic-banner-sm {
+  padding: var(--relic-space-sm) var(--relic-space-md);
+  font-size: var(--relic-font-size-sm);
+}
+
+.relic-banner-lg {
+  padding: var(--relic-space-lg) var(--relic-space-xl);
+  font-size: var(--relic-font-size-lg);
+}
+
+/* Toast (Floating Banner) */
+.relic-toast {
+  position: fixed;
+  z-index: var(--relic-z-tooltip);
+  min-width: 250px;
+  max-width: 350px;
+  background-color: var(--relic-white);
+  border: 1px solid var(--relic-gray-200);
+  border-radius: var(--relic-radius-md);
+  box-shadow: var(--relic-shadow-xl);
+  animation: relic-slide-in 0.3s ease-out;
+}
+
+.relic-toast-top-right {
+  top: var(--relic-space-lg);
+  right: var(--relic-space-lg);
+}
+
+.relic-toast-top-left {
+  top: var(--relic-space-lg);
+  left: var(--relic-space-lg);
+}
+
+.relic-toast-bottom-right {
+  bottom: var(--relic-space-lg);
+  right: var(--relic-space-lg);
+}
+
+.relic-toast-bottom-left {
+  bottom: var(--relic-space-lg);
+  left: var(--relic-space-lg);
+}
+
+@keyframes relic-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

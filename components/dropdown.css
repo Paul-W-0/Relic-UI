@@ -1,0 +1,124 @@
+/* Relic UI - Dropdown Component */
+
+.relic-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.relic-dropdown-toggle {
+  cursor: pointer;
+}
+
+.relic-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: var(--relic-z-dropdown);
+  display: none;
+  min-width: 10rem;
+  padding: var(--relic-space-sm) 0;
+  margin: var(--relic-space-xs) 0 0;
+  font-size: var(--relic-font-size-base);
+  color: var(--relic-gray-900);
+  background-color: var(--relic-white);
+  border: 1px solid var(--relic-gray-200);
+  border-radius: var(--relic-radius-md);
+  box-shadow: var(--relic-shadow-lg);
+  list-style: none;
+}
+
+.relic-dropdown-menu.show {
+  display: block;
+}
+
+.relic-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: var(--relic-space-sm) var(--relic-space-md);
+  font-weight: 400;
+  color: var(--relic-gray-900);
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: var(--relic-transition);
+}
+
+.relic-dropdown-item:hover,
+.relic-dropdown-item:focus {
+  background-color: var(--relic-gray-100);
+  color: var(--relic-primary);
+}
+
+.relic-dropdown-item.active {
+  background-color: var(--relic-primary);
+  color: var(--relic-white);
+}
+
+.relic-dropdown-item:disabled {
+  color: var(--relic-gray-400);
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+.relic-dropdown-divider {
+  height: 0;
+  margin: var(--relic-space-sm) 0;
+  overflow: hidden;
+  border-top: 1px solid var(--relic-gray-200);
+}
+
+.relic-dropdown-header {
+  display: block;
+  padding: var(--relic-space-sm) var(--relic-space-md);
+  margin-bottom: 0;
+  font-size: var(--relic-font-size-sm);
+  font-weight: 600;
+  color: var(--relic-gray-600);
+  white-space: nowrap;
+}
+
+/* Dropdown Positions */
+.relic-dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+.relic-dropdown-menu-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Dropup */
+.relic-dropup .relic-dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: var(--relic-space-xs);
+}
+
+/* Dropdown Dark */
+.relic-dropdown-menu-dark {
+  background-color: var(--relic-dark);
+  border-color: var(--relic-gray-700);
+}
+
+.relic-dropdown-menu-dark .relic-dropdown-item {
+  color: var(--relic-gray-200);
+}
+
+.relic-dropdown-menu-dark .relic-dropdown-item:hover,
+.relic-dropdown-menu-dark .relic-dropdown-item:focus {
+  background-color: var(--relic-gray-700);
+  color: var(--relic-white);
+}
+
+.relic-dropdown-menu-dark .relic-dropdown-divider {
+  border-top-color: var(--relic-gray-700);
+}
+
+.relic-dropdown-menu-dark .relic-dropdown-header {
+  color: var(--relic-gray-400);
+}

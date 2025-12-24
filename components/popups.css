@@ -1,0 +1,235 @@
+/* Relic UI - Modal/Popup Component */
+
+/* Modal Overlay */
+.relic-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--relic-z-modal);
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: relic-fade-in 0.2s ease-out;
+}
+
+.relic-modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes relic-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Dialog */
+.relic-modal-dialog {
+  position: relative;
+  width: auto;
+  max-width: 500px;
+  margin: var(--relic-space-lg);
+  pointer-events: none;
+  animation: relic-modal-slide 0.3s ease-out;
+}
+
+@keyframes relic-modal-slide {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal Content */
+.relic-modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: var(--relic-white);
+  background-clip: padding-box;
+  border: 1px solid var(--relic-gray-200);
+  border-radius: var(--relic-radius-lg);
+  box-shadow: var(--relic-shadow-xl);
+  outline: 0;
+}
+
+/* Modal Header */
+.relic-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--relic-space-lg);
+  border-bottom: 1px solid var(--relic-gray-200);
+}
+
+.relic-modal-title {
+  margin: 0;
+  font-size: var(--relic-font-size-xl);
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--relic-gray-900);
+}
+
+.relic-modal-close {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--relic-gray-500);
+  cursor: pointer;
+  transition: var(--relic-transition);
+}
+
+.relic-modal-close:hover {
+  color: var(--relic-gray-900);
+}
+
+/* Modal Body */
+.relic-modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: var(--relic-space-lg);
+  color: var(--relic-gray-700);
+}
+
+/* Modal Footer */
+.relic-modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--relic-space-sm);
+  padding: var(--relic-space-lg);
+  border-top: 1px solid var(--relic-gray-200);
+}
+
+/* Modal Sizes */
+.relic-modal-sm .relic-modal-dialog {
+  max-width: 300px;
+}
+
+.relic-modal-lg .relic-modal-dialog {
+  max-width: 800px;
+}
+
+.relic-modal-xl .relic-modal-dialog {
+  max-width: 1140px;
+}
+
+.relic-modal-fullscreen .relic-modal-dialog {
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  margin: 0;
+}
+
+.relic-modal-fullscreen .relic-modal-content {
+  height: 100vh;
+  border: 0;
+  border-radius: 0;
+}
+
+/* Tooltip */
+.relic-tooltip {
+  position: absolute;
+  z-index: var(--relic-z-tooltip);
+  display: none;
+  padding: var(--relic-space-xs) var(--relic-space-sm);
+  font-size: var(--relic-font-size-sm);
+  color: var(--relic-white);
+  background-color: var(--relic-dark);
+  border-radius: var(--relic-radius-sm);
+  box-shadow: var(--relic-shadow-md);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.relic-tooltip.show {
+  display: block;
+  animation: relic-fade-in 0.15s ease-out;
+}
+
+.relic-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.relic-tooltip-top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: var(--relic-space-xs);
+}
+
+.relic-tooltip-top .relic-tooltip-arrow {
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-color: var(--relic-dark) transparent transparent transparent;
+}
+
+.relic-tooltip-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: var(--relic-space-xs);
+}
+
+.relic-tooltip-bottom .relic-tooltip-arrow {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-color: transparent transparent var(--relic-dark) transparent;
+}
+
+/* Popover */
+.relic-popover {
+  position: absolute;
+  z-index: var(--relic-z-tooltip);
+  display: none;
+  max-width: 276px;
+  padding: 0;
+  background-color: var(--relic-white);
+  border: 1px solid var(--relic-gray-200);
+  border-radius: var(--relic-radius-md);
+  box-shadow: var(--relic-shadow-lg);
+}
+
+.relic-popover.show {
+  display: block;
+  animation: relic-fade-in 0.2s ease-out;
+}
+
+.relic-popover-header {
+  padding: var(--relic-space-sm) var(--relic-space-md);
+  font-size: var(--relic-font-size-base);
+  font-weight: 600;
+  color: var(--relic-gray-900);
+  background-color: var(--relic-gray-50);
+  border-bottom: 1px solid var(--relic-gray-200);
+  border-top-left-radius: var(--relic-radius-md);
+  border-top-right-radius: var(--relic-radius-md);
+}
+
+.relic-popover-body {
+  padding: var(--relic-space-md);
+  color: var(--relic-gray-700);
+}

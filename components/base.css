@@ -1,0 +1,249 @@
+/* Relic UI - Base Styles & CSS Variables */
+
+/* CSS Variables for Theming */
+:root {
+  /* Color Palette */
+  --relic-primary: #3b82f6;
+  --relic-primary-dark: #2563eb;
+  --relic-primary-light: #60a5fa;
+  --relic-secondary: #8b5cf6;
+  --relic-secondary-dark: #7c3aed;
+  --relic-secondary-light: #a78bfa;
+  --relic-success: #10b981;
+  --relic-warning: #f59e0b;
+  --relic-danger: #ef4444;
+  --relic-info: #06b6d4;
+  --relic-light: #f3f4f6;
+  --relic-dark: #1f2937;
+  --relic-white: #ffffff;
+  --relic-black: #000000;
+  
+  /* Gray Scale */
+  --relic-gray-50: #f9fafb;
+  --relic-gray-100: #f3f4f6;
+  --relic-gray-200: #e5e7eb;
+  --relic-gray-300: #d1d5db;
+  --relic-gray-400: #9ca3af;
+  --relic-gray-500: #6b7280;
+  --relic-gray-600: #4b5563;
+  --relic-gray-700: #374151;
+  --relic-gray-800: #1f2937;
+  --relic-gray-900: #111827;
+  
+  /* Spacing */
+  --relic-space-xs: 0.25rem;
+  --relic-space-sm: 0.5rem;
+  --relic-space-md: 1rem;
+  --relic-space-lg: 1.5rem;
+  --relic-space-xl: 2rem;
+  --relic-space-2xl: 3rem;
+  --relic-space-3xl: 4rem;
+  
+  /* Typography */
+  --relic-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --relic-font-mono: 'Courier New', Courier, monospace;
+  --relic-font-size-xs: 0.75rem;
+  --relic-font-size-sm: 0.875rem;
+  --relic-font-size-base: 1rem;
+  --relic-font-size-lg: 1.125rem;
+  --relic-font-size-xl: 1.25rem;
+  --relic-font-size-2xl: 1.5rem;
+  --relic-font-size-3xl: 1.875rem;
+  --relic-font-size-4xl: 2.25rem;
+  
+  /* Border Radius */
+  --relic-radius-sm: 0.25rem;
+  --relic-radius-md: 0.375rem;
+  --relic-radius-lg: 0.5rem;
+  --relic-radius-xl: 0.75rem;
+  --relic-radius-2xl: 1rem;
+  --relic-radius-full: 9999px;
+  
+  /* Shadows */
+  --relic-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --relic-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --relic-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --relic-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Transitions */
+  --relic-transition: all 0.2s ease-in-out;
+  --relic-transition-fast: all 0.15s ease-in-out;
+  --relic-transition-slow: all 0.3s ease-in-out;
+  
+  /* Z-index */
+  --relic-z-dropdown: 1000;
+  --relic-z-modal: 1050;
+  --relic-z-tooltip: 1100;
+}
+
+/* Modern CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-family: var(--relic-font-family);
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+  line-height: inherit;
+  background-color: var(--relic-white);
+  color: var(--relic-gray-900);
+}
+
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp, pre {
+  font-family: var(--relic-font-mono);
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, [type='button'], [type='reset'], [type='submit'] {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+
+:-moz-focusring {
+  outline: auto;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+summary {
+  display: list-item;
+}
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, figure, p, pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol, ul, menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: var(--relic-gray-400);
+}
+
+button, [role="button"] {
+  cursor: pointer;
+}
+
+:disabled {
+  cursor: default;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+[hidden] {
+  display: none;
+}
