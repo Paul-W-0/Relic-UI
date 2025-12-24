@@ -1,0 +1,126 @@
+/* Relic UI - Grid & Layout System */
+
+/* Container */
+.relic-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--relic-space-md);
+  padding-left: var(--relic-space-md);
+}
+
+.relic-container-fluid {
+  width: 100%;
+  padding-right: var(--relic-space-md);
+  padding-left: var(--relic-space-md);
+}
+
+@media (min-width: 640px) {
+  .relic-container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .relic-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .relic-container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .relic-container {
+    max-width: 1280px;
+  }
+}
+
+/* Flexbox Grid */
+.relic-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(var(--relic-space-md) * -1);
+  margin-left: calc(var(--relic-space-md) * -1);
+}
+
+.relic-col {
+  flex: 1 0 0%;
+  padding-right: var(--relic-space-md);
+  padding-left: var(--relic-space-md);
+}
+
+/* Column Sizes */
+.relic-col-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+.relic-col-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+.relic-col-3 { flex: 0 0 25%; max-width: 25%; }
+.relic-col-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+.relic-col-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+.relic-col-6 { flex: 0 0 50%; max-width: 50%; }
+.relic-col-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+.relic-col-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+.relic-col-9 { flex: 0 0 75%; max-width: 75%; }
+.relic-col-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+.relic-col-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+.relic-col-12 { flex: 0 0 100%; max-width: 100%; }
+
+/* CSS Grid System */
+.relic-grid {
+  display: grid;
+  gap: var(--relic-space-md);
+}
+
+.relic-grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.relic-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.relic-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.relic-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.relic-grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.relic-grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.relic-grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+
+/* Gap Utilities */
+.relic-gap-0 { gap: 0; }
+.relic-gap-xs { gap: var(--relic-space-xs); }
+.relic-gap-sm { gap: var(--relic-space-sm); }
+.relic-gap-md { gap: var(--relic-space-md); }
+.relic-gap-lg { gap: var(--relic-space-lg); }
+.relic-gap-xl { gap: var(--relic-space-xl); }
+
+/* Flexbox Utilities */
+.relic-flex { display: flex; }
+.relic-inline-flex { display: inline-flex; }
+.relic-flex-row { flex-direction: row; }
+.relic-flex-col { flex-direction: column; }
+.relic-flex-wrap { flex-wrap: wrap; }
+.relic-flex-nowrap { flex-wrap: nowrap; }
+
+/* Justify Content */
+.relic-justify-start { justify-content: flex-start; }
+.relic-justify-center { justify-content: center; }
+.relic-justify-end { justify-content: flex-end; }
+.relic-justify-between { justify-content: space-between; }
+.relic-justify-around { justify-content: space-around; }
+.relic-justify-evenly { justify-content: space-evenly; }
+
+/* Align Items */
+.relic-items-start { align-items: flex-start; }
+.relic-items-center { align-items: center; }
+.relic-items-end { align-items: flex-end; }
+.relic-items-stretch { align-items: stretch; }
+.relic-items-baseline { align-items: baseline; }
+
+/* Responsive Utilities */
+@media (min-width: 768px) {
+  .relic-md-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .relic-md-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .relic-md-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .relic-lg-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .relic-lg-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .relic-lg-grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}

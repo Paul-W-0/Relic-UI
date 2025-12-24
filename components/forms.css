@@ -1,0 +1,294 @@
+/* Relic UI - Form Components */
+
+/* Form Group */
+.relic-form-group {
+  margin-bottom: var(--relic-space-lg);
+}
+
+/* Labels */
+.relic-label {
+  display: inline-block;
+  margin-bottom: var(--relic-space-xs);
+  font-size: var(--relic-font-size-sm);
+  font-weight: 500;
+  color: var(--relic-gray-700);
+}
+
+.relic-label-required::after {
+  content: '*';
+  color: var(--relic-danger);
+  margin-left: var(--relic-space-xs);
+}
+
+/* Input Fields */
+.relic-input {
+  display: block;
+  width: 100%;
+  padding: var(--relic-space-sm) var(--relic-space-md);
+  font-size: var(--relic-font-size-base);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--relic-gray-900);
+  background-color: var(--relic-white);
+  background-clip: padding-box;
+  border: 1px solid var(--relic-gray-300);
+  border-radius: var(--relic-radius-md);
+  transition: var(--relic-transition);
+  outline: none;
+}
+
+.relic-input:focus {
+  border-color: var(--relic-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.relic-input:disabled {
+  background-color: var(--relic-gray-100);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.relic-input::placeholder {
+  color: var(--relic-gray-400);
+}
+
+/* Input Sizes */
+.relic-input-sm {
+  padding: var(--relic-space-xs) var(--relic-space-sm);
+  font-size: var(--relic-font-size-sm);
+}
+
+.relic-input-lg {
+  padding: var(--relic-space-md) var(--relic-space-lg);
+  font-size: var(--relic-font-size-lg);
+}
+
+/* Input States */
+.relic-input-error {
+  border-color: var(--relic-danger);
+}
+
+.relic-input-error:focus {
+  border-color: var(--relic-danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.relic-input-success {
+  border-color: var(--relic-success);
+}
+
+.relic-input-success:focus {
+  border-color: var(--relic-success);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Textarea */
+.relic-textarea {
+  display: block;
+  width: 100%;
+  padding: var(--relic-space-sm) var(--relic-space-md);
+  font-size: var(--relic-font-size-base);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--relic-gray-900);
+  background-color: var(--relic-white);
+  border: 1px solid var(--relic-gray-300);
+  border-radius: var(--relic-radius-md);
+  transition: var(--relic-transition);
+  resize: vertical;
+  outline: none;
+}
+
+.relic-textarea:focus {
+  border-color: var(--relic-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Select */
+.relic-select {
+  display: block;
+  width: 100%;
+  padding: var(--relic-space-sm) var(--relic-space-md);
+  font-size: var(--relic-font-size-base);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--relic-gray-900);
+  background-color: var(--relic-white);
+  border: 1px solid var(--relic-gray-300);
+  border-radius: var(--relic-radius-md);
+  transition: var(--relic-transition);
+  outline: none;
+  cursor: pointer;
+}
+
+.relic-select:focus {
+  border-color: var(--relic-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Checkbox & Radio */
+.relic-checkbox,
+.relic-radio {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: var(--relic-primary);
+  border: 1px solid var(--relic-gray-300);
+  border-radius: var(--relic-radius-sm);
+  cursor: pointer;
+  transition: var(--relic-transition);
+}
+
+.relic-radio {
+  border-radius: var(--relic-radius-full);
+}
+
+.relic-checkbox:checked,
+.relic-radio:checked {
+  background-color: var(--relic-primary);
+  border-color: var(--relic-primary);
+}
+
+.relic-checkbox:focus,
+.relic-radio:focus {
+  outline: 2px solid var(--relic-primary);
+  outline-offset: 2px;
+}
+
+/* Form Check (Checkbox/Radio Group) */
+.relic-form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--relic-space-sm);
+}
+
+.relic-form-check-input {
+  margin-right: var(--relic-space-sm);
+}
+
+.relic-form-check-label {
+  font-size: var(--relic-font-size-base);
+  color: var(--relic-gray-700);
+  cursor: pointer;
+}
+
+/* Input Group */
+.relic-input-group {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.relic-input-group > .relic-input {
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+
+.relic-input-group-prepend,
+.relic-input-group-append {
+  display: flex;
+  align-items: center;
+  padding: var(--relic-space-sm) var(--relic-space-md);
+  font-size: var(--relic-font-size-base);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--relic-gray-700);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--relic-gray-100);
+  border: 1px solid var(--relic-gray-300);
+}
+
+.relic-input-group-prepend {
+  border-right: 0;
+  border-top-left-radius: var(--relic-radius-md);
+  border-bottom-left-radius: var(--relic-radius-md);
+}
+
+.relic-input-group-append {
+  border-left: 0;
+  border-top-right-radius: var(--relic-radius-md);
+  border-bottom-right-radius: var(--relic-radius-md);
+}
+
+.relic-input-group > .relic-input:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.relic-input-group > .relic-input:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Form Helper Text */
+.relic-form-text {
+  display: block;
+  margin-top: var(--relic-space-xs);
+  font-size: var(--relic-font-size-sm);
+  color: var(--relic-gray-600);
+}
+
+.relic-form-error {
+  display: block;
+  margin-top: var(--relic-space-xs);
+  font-size: var(--relic-font-size-sm);
+  color: var(--relic-danger);
+}
+
+.relic-form-success {
+  display: block;
+  margin-top: var(--relic-space-xs);
+  font-size: var(--relic-font-size-sm);
+  color: var(--relic-success);
+}
+
+/* Switch Toggle */
+.relic-switch {
+  position: relative;
+  display: inline-block;
+  width: 2.75rem;
+  height: 1.5rem;
+}
+
+.relic-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.relic-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--relic-gray-300);
+  transition: var(--relic-transition);
+  border-radius: var(--relic-radius-full);
+}
+
+.relic-switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 1.125rem;
+  width: 1.125rem;
+  left: 0.1875rem;
+  bottom: 0.1875rem;
+  background-color: var(--relic-white);
+  transition: var(--relic-transition);
+  border-radius: 50%;
+}
+
+.relic-switch input:checked + .relic-switch-slider {
+  background-color: var(--relic-primary);
+}
+
+.relic-switch input:checked + .relic-switch-slider:before {
+  transform: translateX(1.25rem);
+}
+
+.relic-switch input:focus + .relic-switch-slider {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}

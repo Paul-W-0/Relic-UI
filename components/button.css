@@ -1,0 +1,246 @@
+/* Relic UI - Button Component */
+
+/* Base Button Styles */
+.relic-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--relic-space-sm) var(--relic-space-md);
+  font-size: var(--relic-font-size-base);
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: var(--relic-radius-md);
+  transition: var(--relic-transition);
+  outline: none;
+}
+
+.relic-btn:focus {
+  outline: 2px solid var(--relic-primary);
+  outline-offset: 2px;
+}
+
+.relic-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Button Variants */
+.relic-btn-primary {
+  background-color: var(--relic-primary);
+  color: var(--relic-white);
+  border-color: var(--relic-primary);
+}
+
+.relic-btn-primary:hover {
+  background-color: var(--relic-primary-dark);
+  border-color: var(--relic-primary-dark);
+}
+
+.relic-btn-secondary {
+  background-color: var(--relic-secondary);
+  color: var(--relic-white);
+  border-color: var(--relic-secondary);
+}
+
+.relic-btn-secondary:hover {
+  background-color: var(--relic-secondary-dark);
+  border-color: var(--relic-secondary-dark);
+}
+
+.relic-btn-success {
+  background-color: var(--relic-success);
+  color: var(--relic-white);
+  border-color: var(--relic-success);
+}
+
+.relic-btn-success:hover {
+  background-color: #059669;
+  border-color: #059669;
+}
+
+.relic-btn-danger {
+  background-color: var(--relic-danger);
+  color: var(--relic-white);
+  border-color: var(--relic-danger);
+}
+
+.relic-btn-danger:hover {
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+.relic-btn-warning {
+  background-color: var(--relic-warning);
+  color: var(--relic-white);
+  border-color: var(--relic-warning);
+}
+
+.relic-btn-warning:hover {
+  background-color: #d97706;
+  border-color: #d97706;
+}
+
+.relic-btn-info {
+  background-color: var(--relic-info);
+  color: var(--relic-white);
+  border-color: var(--relic-info);
+}
+
+.relic-btn-info:hover {
+  background-color: #0891b2;
+  border-color: #0891b2;
+}
+
+.relic-btn-light {
+  background-color: var(--relic-light);
+  color: var(--relic-dark);
+  border-color: var(--relic-gray-300);
+}
+
+.relic-btn-light:hover {
+  background-color: var(--relic-gray-200);
+  border-color: var(--relic-gray-400);
+}
+
+.relic-btn-dark {
+  background-color: var(--relic-dark);
+  color: var(--relic-white);
+  border-color: var(--relic-dark);
+}
+
+.relic-btn-dark:hover {
+  background-color: var(--relic-gray-900);
+  border-color: var(--relic-gray-900);
+}
+
+/* Outline Buttons */
+.relic-btn-outline-primary {
+  background-color: transparent;
+  color: var(--relic-primary);
+  border-color: var(--relic-primary);
+}
+
+.relic-btn-outline-primary:hover {
+  background-color: var(--relic-primary);
+  color: var(--relic-white);
+}
+
+.relic-btn-outline-secondary {
+  background-color: transparent;
+  color: var(--relic-secondary);
+  border-color: var(--relic-secondary);
+}
+
+.relic-btn-outline-secondary:hover {
+  background-color: var(--relic-secondary);
+  color: var(--relic-white);
+}
+
+.relic-btn-outline-success {
+  background-color: transparent;
+  color: var(--relic-success);
+  border-color: var(--relic-success);
+}
+
+.relic-btn-outline-success:hover {
+  background-color: var(--relic-success);
+  color: var(--relic-white);
+}
+
+.relic-btn-outline-danger {
+  background-color: transparent;
+  color: var(--relic-danger);
+  border-color: var(--relic-danger);
+}
+
+.relic-btn-outline-danger:hover {
+  background-color: var(--relic-danger);
+  color: var(--relic-white);
+}
+
+/* Button Sizes */
+.relic-btn-sm {
+  padding: var(--relic-space-xs) var(--relic-space-sm);
+  font-size: var(--relic-font-size-sm);
+}
+
+.relic-btn-lg {
+  padding: var(--relic-space-md) var(--relic-space-xl);
+  font-size: var(--relic-font-size-lg);
+}
+
+.relic-btn-xl {
+  padding: var(--relic-space-lg) var(--relic-space-2xl);
+  font-size: var(--relic-font-size-xl);
+}
+
+/* Button Block */
+.relic-btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Button Group */
+.relic-btn-group {
+  display: inline-flex;
+  gap: 0;
+}
+
+.relic-btn-group > .relic-btn {
+  border-radius: 0;
+  border-right-width: 0;
+}
+
+.relic-btn-group > .relic-btn:first-child {
+  border-top-left-radius: var(--relic-radius-md);
+  border-bottom-left-radius: var(--relic-radius-md);
+}
+
+.relic-btn-group > .relic-btn:last-child {
+  border-top-right-radius: var(--relic-radius-md);
+  border-bottom-right-radius: var(--relic-radius-md);
+  border-right-width: 1px;
+}
+
+/* Icon Buttons */
+.relic-btn-icon {
+  padding: var(--relic-space-sm);
+  aspect-ratio: 1;
+}
+
+/* Loading State */
+.relic-btn.relic-btn-loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.relic-btn.relic-btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: relic-spin 0.6s linear infinite;
+  color: inherit;
+}
+
+@keyframes relic-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

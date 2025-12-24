@@ -1,0 +1,160 @@
+/* Relic UI - Navbar Component */
+
+.relic-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--relic-space-md) var(--relic-space-lg);
+  background-color: var(--relic-white);
+  border-bottom: 1px solid var(--relic-gray-200);
+  box-shadow: var(--relic-shadow-sm);
+}
+
+.relic-navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: var(--relic-font-size-xl);
+  font-weight: 600;
+  color: var(--relic-gray-900);
+  text-decoration: none;
+  transition: var(--relic-transition);
+}
+
+.relic-navbar-brand:hover {
+  color: var(--relic-primary);
+}
+
+.relic-navbar-brand img {
+  height: 2rem;
+  margin-right: var(--relic-space-sm);
+}
+
+.relic-navbar-nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--relic-space-sm);
+}
+
+.relic-navbar-item {
+  list-style: none;
+}
+
+.relic-navbar-link {
+  display: block;
+  padding: var(--relic-space-sm) var(--relic-space-md);
+  font-size: var(--relic-font-size-base);
+  color: var(--relic-gray-700);
+  text-decoration: none;
+  border-radius: var(--relic-radius-md);
+  transition: var(--relic-transition);
+}
+
+.relic-navbar-link:hover {
+  background-color: var(--relic-gray-100);
+  color: var(--relic-primary);
+}
+
+.relic-navbar-link.active {
+  background-color: var(--relic-primary);
+  color: var(--relic-white);
+}
+
+/* Navbar Variants */
+.relic-navbar-dark {
+  background-color: var(--relic-dark);
+  border-bottom-color: var(--relic-gray-700);
+}
+
+.relic-navbar-dark .relic-navbar-brand,
+.relic-navbar-dark .relic-navbar-link {
+  color: var(--relic-white);
+}
+
+.relic-navbar-dark .relic-navbar-link:hover {
+  background-color: var(--relic-gray-700);
+  color: var(--relic-white);
+}
+
+.relic-navbar-primary {
+  background-color: var(--relic-primary);
+  border-bottom-color: var(--relic-primary-dark);
+}
+
+.relic-navbar-primary .relic-navbar-brand,
+.relic-navbar-primary .relic-navbar-link {
+  color: var(--relic-white);
+}
+
+.relic-navbar-primary .relic-navbar-link:hover {
+  background-color: var(--relic-primary-dark);
+}
+
+/* Navbar Toggle (Mobile Menu) */
+.relic-navbar-toggle {
+  display: none;
+  flex-direction: column;
+  padding: var(--relic-space-xs);
+  background: transparent;
+  border: 1px solid var(--relic-gray-300);
+  border-radius: var(--relic-radius-sm);
+  cursor: pointer;
+}
+
+.relic-navbar-toggle span {
+  width: 1.5rem;
+  height: 2px;
+  background-color: var(--relic-gray-700);
+  margin: 3px 0;
+  transition: var(--relic-transition);
+}
+
+.relic-navbar-dark .relic-navbar-toggle span,
+.relic-navbar-primary .relic-navbar-toggle span {
+  background-color: var(--relic-white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .relic-navbar {
+    flex-wrap: wrap;
+  }
+  
+  .relic-navbar-toggle {
+    display: flex;
+  }
+  
+  .relic-navbar-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: var(--relic-space-md);
+  }
+  
+  .relic-navbar-nav.active {
+    display: flex;
+  }
+  
+  .relic-navbar-link {
+    width: 100%;
+  }
+}
+
+/* Sticky Navbar */
+.relic-navbar-sticky {
+  position: sticky;
+  top: 0;
+  z-index: var(--relic-z-dropdown);
+}
+
+/* Fixed Navbar */
+.relic-navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--relic-z-dropdown);
+}

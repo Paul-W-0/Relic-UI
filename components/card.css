@@ -1,0 +1,111 @@
+/* Relic UI - Card Component */
+
+.relic-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--relic-white);
+  border: 1px solid var(--relic-gray-200);
+  border-radius: var(--relic-radius-lg);
+  box-shadow: var(--relic-shadow-sm);
+  overflow: hidden;
+  transition: var(--relic-transition);
+}
+
+.relic-card:hover {
+  box-shadow: var(--relic-shadow-md);
+}
+
+.relic-card-header {
+  padding: var(--relic-space-lg);
+  border-bottom: 1px solid var(--relic-gray-200);
+  background-color: var(--relic-gray-50);
+}
+
+.relic-card-title {
+  font-size: var(--relic-font-size-xl);
+  font-weight: 600;
+  color: var(--relic-gray-900);
+  margin: 0;
+}
+
+.relic-card-subtitle {
+  font-size: var(--relic-font-size-sm);
+  color: var(--relic-gray-600);
+  margin-top: var(--relic-space-xs);
+}
+
+.relic-card-body {
+  padding: var(--relic-space-lg);
+  flex: 1;
+}
+
+.relic-card-footer {
+  padding: var(--relic-space-lg);
+  border-top: 1px solid var(--relic-gray-200);
+  background-color: var(--relic-gray-50);
+}
+
+.relic-card-img-top {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: var(--relic-radius-lg);
+  border-top-right-radius: var(--relic-radius-lg);
+}
+
+.relic-card-img-bottom {
+  width: 100%;
+  height: auto;
+  border-bottom-left-radius: var(--relic-radius-lg);
+  border-bottom-right-radius: var(--relic-radius-lg);
+}
+
+/* Card Variants */
+.relic-card-flat {
+  box-shadow: none;
+  border: 1px solid var(--relic-gray-200);
+}
+
+.relic-card-elevated {
+  box-shadow: var(--relic-shadow-lg);
+  border: none;
+}
+
+.relic-card-bordered {
+  border: 2px solid var(--relic-gray-300);
+  box-shadow: none;
+}
+
+/* Card Colors */
+.relic-card-primary {
+  border-color: var(--relic-primary);
+}
+
+.relic-card-primary .relic-card-header {
+  background-color: var(--relic-primary);
+  color: var(--relic-white);
+  border-bottom-color: var(--relic-primary-dark);
+}
+
+.relic-card-secondary {
+  border-color: var(--relic-secondary);
+}
+
+.relic-card-secondary .relic-card-header {
+  background-color: var(--relic-secondary);
+  color: var(--relic-white);
+  border-bottom-color: var(--relic-secondary-dark);
+}
+
+/* Horizontal Card */
+.relic-card-horizontal {
+  flex-direction: row;
+}
+
+.relic-card-horizontal .relic-card-img-top {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  border-top-left-radius: var(--relic-radius-lg);
+  border-bottom-left-radius: var(--relic-radius-lg);
+}
